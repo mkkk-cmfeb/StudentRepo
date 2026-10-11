@@ -50,4 +50,11 @@ public List<Student> getByCourse(@PathVariable String course){
 	
 	return serve.findCourse(course);
 }
+
+@GetMapping("/coursename/{course}/{name}")
+public List<Student> getByCourseName(@PathVariable String course,@PathVariable String name){
+	
+	
+	return serve.getCourseName(name,course);
+}
 }

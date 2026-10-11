@@ -40,4 +40,9 @@ public class StudentService {
 		
 		return stud.findByCourse(course);
 	}
+	
+	public List<Student> getCourseName(String name,String course){
+		
+		return stud.findByNameAndCourse(name, course);
+	}
 }
