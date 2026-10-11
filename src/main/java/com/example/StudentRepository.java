@@ -9,4 +9,5 @@ public interface StudentRepository extends JpaRepository<Student,Long>{
 	public List<Student> findByCourse(String course);
 	public List<Student> findByNameAndCourse(String name,String course);
 	
+	public List<Student> findByCourseOrName(String course,String name);
 }

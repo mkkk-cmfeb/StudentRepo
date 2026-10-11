@@ -45,4 +45,9 @@ public class StudentService {
 		
 		return stud.findByNameAndCourse(name, course);
 	}
+	
+	public List<Student> getCourseNameByOr(String course, String name){
+		
+		return stud.findByCourseOrName(course, name);
+	}
 }
