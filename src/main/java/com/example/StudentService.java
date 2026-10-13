@@ -50,4 +50,15 @@ public class StudentService {
 		
 		return stud.findByCourseOrName(course, name);
 	}
+	
+	public List<Student> getNameContains(String name){
+		
+		
+		return stud.findByNameContains(name);
+	}
+	
+	public List<Student> getNameStart(String name){
+		
+		return stud.findByNameStartingWith(name);
+	}
 }

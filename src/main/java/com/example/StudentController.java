@@ -63,4 +63,16 @@ public List<Student> getByCourseOrName(@PathVariable String course,@PathVariable
 	
 	         return serve.getCourseNameByOr(course,name);
 }
+
+@GetMapping("/contains/{name}")
+public List<Student> getContainsName(@PathVariable String name){
+	
+	return serve.getNameContains(name);
+}
+
+@GetMapping("/startwith/{name}")
+public List<Student> startWith(@PathVariable String name){
+	
+	return serve.getNameStart(name);
+}
 }
