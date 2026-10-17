@@ -61,4 +61,41 @@ public class StudentService {
 		
 		return stud.findByNameStartingWith(name);
 	}
+	
+	public List<Student> getNameEnd(String name){
+		
+		
+		return stud.findByNameEndingWith(name);
+	}
+	
+	public List<Student> getOrderByCourse(String course){
+		
+		return stud.findByCourseOrderByNameAsc(course);
+	}
+	
+	public List<Student> getOrderByDesc(String csc){
+		
+		return stud.findByCourseOrderByNameDesc(csc);
+	}
+	
+	public List<Student> getNameTop3(String course){
+		
+		return stud.findTop3ByCourseOrderByNameAsc(course);
+	}
+	
+	public Long getCountByCourse(String course) {
+		
+		return stud.countByCourse(course);
+	}
+	
+	public Boolean courseExist(String course) {
+		
+		return stud.existsByCourse(course);
+	}
+	
+	public List<Student> notCourses(String course){
+		
+		
+		return stud.findByCourseNot(course);
+	}
 }

@@ -75,4 +75,48 @@ public List<Student> startWith(@PathVariable String name){
 	
 	return serve.getNameStart(name);
 }
+
+@GetMapping("/endwith/{name}")
+public List<Student> getNameEndWith(@PathVariable String name){
+	
+	return serve.getNameEnd(name);
+}
+
+@GetMapping("/orderby/{course}")
+public List<Student> getOrderBy(@PathVariable String course){
+	
+	return serve.getOrderByCourse(course);
+}
+
+@GetMapping("/orderbydesc/{courses}")
+public List<Student> getOrderDesc(@PathVariable String courses)
+{
+	
+	return serve.getOrderByDesc(courses);
+}
+
+@GetMapping("/orderbytop3/{course}")
+public List<Student> getTop3(@PathVariable String course){
+	
+	return serve.getNameTop3(course);
+}
+
+@GetMapping("/countcourse/{course}")
+public Long getCountCourse(@PathVariable String course) {
+	
+	return serve.getCountByCourse(course);
+}
+
+@GetMapping("/existcourse/{course}")
+public Boolean  courseExistence(@PathVariable String course) {
+	
+	return  serve.courseExist(course);
+}
+
+@GetMapping("/coursenot/{course}")
+public List<Student> getCourseNot(@PathVariable String course){
+	
+	return serve.notCourses(course);
+}
+
 }
